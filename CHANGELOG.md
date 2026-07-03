@@ -1,3 +1,7 @@
+# 4
+
+Compared GitHub Pages to Netlify.
+
 # 3
 
 Created a post explaining how to set up GitHub Pages.
