@@ -1,3 +1,7 @@
+# 6
+
+Changed link for about page.
+
 # 5
 
 Published site URL in README.
