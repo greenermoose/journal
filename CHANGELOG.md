@@ -1,3 +1,7 @@
+# 3
+
+Created a post explaining how to set up GitHub Pages.
+
 # 2
 
 Added a new post skill and a cheatsheet for manually adding posts.
