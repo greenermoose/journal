@@ -1,0 +1,11 @@
+title: Fred's adventures in coding with AI
+email: dev@example.com
+description: >-
+  Documenting the journey, one line of code at a time.
+baseurl: "/journal"
+url: "" 
+github_username: developer
+
+# Build settings
+markdown: kramdown
+# We are using a custom theme, so no built-in theme is specified
