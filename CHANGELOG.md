@@ -1,3 +1,7 @@
+# 7
+
+Troubleshooting GitHub Pages deployment failure.
+
 # 6
 
 Changed link for about page.
