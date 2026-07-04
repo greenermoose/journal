@@ -1,3 +1,7 @@
+# 8
+
+Removed Welcome to my Journal card from home page.
+
 # 7
 
 Troubleshooting GitHub Pages deployment failure.
