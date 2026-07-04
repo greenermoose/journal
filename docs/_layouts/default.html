@@ -22,7 +22,13 @@
       </a>
       <nav class="site-nav">
         <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/about/' | relative_url }}">About</a>
+        <div class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Pages ▾</a>
+          <div class="dropdown-content">
+            <a href="{{ '/about/' | relative_url }}">About</a>
+            <a href="{{ '/cheatsheet/' | relative_url }}">Cheatsheet</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>

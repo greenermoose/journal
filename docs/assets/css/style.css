@@ -120,6 +120,11 @@ a:hover {
   font-size: 1.5rem;
 }
 
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
 .site-nav a {
   margin-left: 20px;
   color: var(--text-color);
@@ -128,6 +133,44 @@ a:hover {
 
 .site-nav a:hover {
   color: var(--accent-color);
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--glass-bg);
+  min-width: 150px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  right: 0;
+  top: 100%;
+  margin-top: 10px;
+}
+
+.dropdown-content a {
+  margin-left: 0;
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
 }
 
 /* Glassmorphism Panels */

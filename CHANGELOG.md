@@ -1,3 +1,7 @@
+# 9
+
+Drop-down menu for about and cheatsheet pages.
+
 # 8
 
 Removed Welcome to my Journal card from home page.
