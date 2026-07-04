@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Cheatsheet
+permalink: /cheatsheet/
 ---
 
 This is a quick reference guide for adding new posts to this coding journal and using Markdown.

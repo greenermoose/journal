@@ -1,3 +1,8 @@
+# 10
+
+Added a skill for creating pages.
+Fixed the 404 error for the cheatsheet page.
+
 # 9
 
 Drop-down menu for about and cheatsheet pages.
