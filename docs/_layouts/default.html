@@ -6,43 +6,22 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <div class="background-effects">
-    <div class="glow-orb orb-1"></div>
-    <div class="glow-orb orb-2"></div>
-  </div>
+  <div class="homecontainer">
+    {% if page.url != '/' %}
+    <h1 class="homelogo"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    {% endif %}
 
-  <header class="site-header">
-    <div class="container header-container">
-      <a class="site-title" href="{{ '/' | relative_url }}">
-        <span class="gradient-text">{{ site.title }}</span>
-      </a>
-      <nav class="site-nav">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <div class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Pages ▾</a>
-          <div class="dropdown-content">
-            <a href="{{ '/about/' | relative_url }}">About</a>
-            <a href="{{ '/cheatsheet/' | relative_url }}">Cheatsheet</a>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-content" aria-label="Content">
-    <div class="container">
+    <main class="page-content" aria-label="Content">
       {{ content }}
-    </div>
-  </main>
+    </main>
 
-  <footer class="site-footer">
-    <div class="container footer-container">
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Documenting the journey.</p>
-    </div>
-  </footer>
+    <footer class="site-footer" role="contentinfo">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. <a href="{{ '/about/' | relative_url }}">About</a> &mdash; <a href="{{ '/cheatsheet/' | relative_url }}">Cheatsheet</a></p>
+    </footer>
+  </div>
 </body>
 </html>

@@ -2,20 +2,39 @@
 layout: default
 ---
 
-<div class="home">
+{% if page.url == '/' %}
+<h1 class="homelogo"><a href="{{ '/' | relative_url }}" class="homelogolink">{{ site.title }}</a></h1>
+{% endif %}
 
-  <h2 class="section-title">Latest Entries</h2>
+<div class="homesecs">
+  
+  <h2 class="homenav"><a href="{{ '/about/' | relative_url }}">About</a></h2>
+  <section class="homesec homesecabout">
+    <h3>1</h3>
+    <p>developer discovering the world of AI coding.</p>
+    <ul>
+      <li><a href="{{ '/about/' | relative_url }}">Read more about the author</a></li>
+    </ul>
+  </section>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <a class="post-card glass-panel-hover" href="{{ post.url | relative_url }}">
-          <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
-          <h3>{{ post.title | escape }}</h3>
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-          <span class="read-more">Read Entry &rarr;</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+  <h2 class="homenav"><a href="#">Journal Entries</a></h2>
+  <section class="homesec homesecwritings">
+    <h3>{{ site.posts | size }}</h3>
+    <p>entries documenting the journey, one line of code at a time.</p>
+    <ul>
+      {% for post in site.posts limit:3 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <span class="date-meta">&mdash; {{ post.date | date: "%b %-d, %Y" }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <h2 class="homenav"><a href="#">Resources</a></h2>
+  <section class="homesec homesecpresos">
+    <h3>1</h3>
+    <p>cheatsheet to keep track of useful commands.</p>
+    <ul>
+      <li><a href="{{ '/cheatsheet/' | relative_url }}">AI Coding Cheatsheet</a></li>
+    </ul>
+  </section>
+
 </div>
