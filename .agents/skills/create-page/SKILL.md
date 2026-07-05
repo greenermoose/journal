@@ -25,13 +25,13 @@ When asked to create a new page, follow these steps exactly:
      ```
    - **Critical Rule**: You MUST include the `permalink` field. It should match the filename but without the extension, wrapped in forward slashes (e.g., for `about.md`, the permalink is `/about/`).
 
-3. **Update the Navigation Dropdown**:
+3. **Update the Footer Navigation**:
    - Open `docs/_layouts/default.html`.
-   - Locate the `<div class="dropdown-content">` inside the site navigation header.
-   - Add a link to the new page using the `relative_url` filter and the permalink you defined. 
+   - Locate the paragraph containing the navigation links inside `<footer class="site-footer" role="contentinfo">`.
+   - Add a link to the new page using the `relative_url` filter and the permalink you defined, separating it from the previous link with a pipe (` | `).
    - Example addition:
      ```html
-     <a href="{{ '/your-page/' | relative_url }}">Your Page Title</a>
+     | <a href="{{ '/your-page/' | relative_url }}">Your Page Title</a>
      ```
 
 4. **Verify**:

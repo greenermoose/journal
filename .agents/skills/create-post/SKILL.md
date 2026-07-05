@@ -18,13 +18,14 @@ When the user asks you to "create a post" or "add a journal entry", you should u
 layout: post
 title: "The Exact Title the User Provided"
 date: YYYY-MM-DD HH:MM:SS -0400
-categories: general
+tags: [tag1, tag2]
 ---
 ```
 *(Ensure the date in the front matter includes the time and timezone offset).*
 
 ## Workflow
 1. If the user hasn't provided a title, ask them for one.
-2. If they provided a topic or initial thoughts, draft the post body using markdown.
-3. Use the `write_to_file` tool to create the file in `docs/_posts/` with the drafted content and front matter.
-4. Notify the user that the post has been created, and provide a link to the file using markdown file links (e.g. `[filename](file:///path/to/file)`).
+2. If the user hasn't specified tags, automatically generate 1-3 relevant tags based on the topic.
+3. If they provided a topic or initial thoughts, draft the post body using markdown.
+4. Use the `write_to_file` tool to create the file in `docs/_posts/` with the drafted content and front matter.
+5. Notify the user that the post has been created, and provide a link to the file using markdown file links (e.g. `[filename](file:///path/to/file)`).
