@@ -1,3 +1,7 @@
+# 13
+
+Added search and tag functionality.
+
 # 12
 
 Tweaked redesign
